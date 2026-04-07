@@ -10,119 +10,83 @@
         body {
             font-family: 'Inter', sans-serif;
             background-color: #ffffff;
-            /* Subtle Apple-style mesh gradient */
             background-image: 
                 radial-gradient(at 0% 0%, hsla(210,100%,95%,1) 0, transparent 50%), 
-                radial-gradient(at 50% 0%, hsla(220,100%,92%,1) 0, transparent 50%), 
-                radial-gradient(at 100% 0%, hsla(200,100%,96%,1) 0, transparent 50%);
+                radial-gradient(at 50% 0%, hsla(220,100%,92%,1) 0, transparent 50%);
             background-attachment: fixed;
             color: #1d1d1f;
-            overflow-x: hidden;
         }
         .glass {
             background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(20px) saturate(180%);
-            -webkit-backdrop-filter: blur(20px) saturate(180%);
-            border: 1px solid rgba(209, 213, 219, 0.3);
+            backdrop-filter: blur(25px) saturate(180%);
+            -webkit-backdrop-filter: blur(25px) saturate(180%);
+            border: 1px solid rgba(209, 213, 219, 0.4);
         }
-        .bouncy-hover:hover {
-            transform: scale(1.03) translateY(-8px);
+        .bouncy {
             transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
         }
-        .text-gradient {
-            background: linear-gradient(180deg, #1d1d1f 0%, #434343 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .bouncy:hover {
+            transform: scale(1.03) translateY(-5px);
+        }
+        .pfp-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
     </style>
 </head>
 <body class="min-h-screen">
 
-    <nav class="fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center glass border-b border-gray-200/50">
-        <span class="font-bold text-xl tracking-tight">Anirudh R.</span>
-        <div class="flex gap-6 text-sm font-medium text-gray-600">
-            <a href="mailto:anrdh86@gmail.com" class="hover:text-blue-600 transition-colors">Contact</a>
-            <a href="https://instagram.com/anrdh86" target="_blank" class="hover:text-blue-600 transition-colors">Instagram</a>
+    <nav class="fixed top-0 w-full z-50 px-6 py-3 flex justify-between items-center glass border-b border-gray-200/50">
+        <span class="font-bold text-lg tracking-tight">Anirudh R.</span>
+        <div class="flex items-center gap-6">
+            <a href="https://instagram.com/anrdh86" target="_blank" class="hover:opacity-70 transition-opacity">
+                <img src="pfp.jpg" alt="PFP" class="w-8 h-8 rounded-full object-cover border border-gray-200">
+            </a>
         </div>
     </nav>
 
-    <section class="flex flex-col items-center justify-center min-h-screen text-center px-4 pt-20">
-        <div class="glass p-12 rounded-[3.5rem] shadow-xl max-w-3xl bouncy-hover">
-            <span class="px-4 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-bold uppercase tracking-widest mb-6 inline-block">
-                Class 12 Student • Vibe Coder
-            </span>
-            <h1 class="text-6xl md:text-8xl font-extrabold mb-6 text-gradient">
-                Cool guy..
-            </h1>
-            <p class="text-gray-500 text-lg md:text-xl max-w-lg mx-auto leading-relaxed font-medium">
-                Merging the logic of code with the soul of motion graphics and video editing.
-            </p>
-            <div class="mt-10 flex flex-wrap gap-4 justify-center">
-                <a href="mailto:anrdh86@gmail.com" class="px-10 py-4 bg-blue-600 text-white rounded-full font-semibold transition-all hover:bg-blue-700 shadow-lg shadow-blue-500/20 active:scale-95">Get in Touch</a>
-                <a href="#projects" class="px-10 py-4 glass text-gray-800 rounded-full font-semibold hover:bg-white/50 transition-all active:scale-95">View Work</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="max-w-6xl mx-auto px-6 py-32">
-        <div class="flex flex-col items-center mb-16">
-            <h3 class="text-4xl font-bold mb-4">Crafted Experiences</h3>
-            <div class="h-1 w-12 bg-blue-600 rounded-full"></div>
+    <section class="flex flex-col items-center justify-center min-h-screen text-center px-6 pt-20">
+        <div class="glass p-2 rounded-[3.5rem] pfp-shadow mb-10 bouncy">
+            <img src="pfp.jpg" alt="Anirudh R." class="w-48 h-48 md:w-64 md:h-64 rounded-[3rem] object-cover">
         </div>
 
-        <div class="grid md:grid-cols-2 gap-10">
-            <div class="glass p-10 rounded-[3rem] bouncy-hover">
-                <div class="h-14 w-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl mb-8 flex items-center justify-center shadow-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                </div>
-                <h4 class="text-2xl font-bold mb-4">config.engine</h4>
-                <p class="text-gray-500 leading-relaxed mb-6">
-                    A high-performance environment where game developers upload builds and let AI handle the heavy lifting of analysis and optimization suggestions.
-                </p>
-                <div class="flex gap-3">
-                    <span class="text-xs font-bold text-blue-600 bg-blue-50 px-4 py-1.5 rounded-full">AI Engine</span>
-                    <span class="text-xs font-bold text-blue-600 bg-blue-50 px-4 py-1.5 rounded-full">Game Dev</span>
-                </div>
-            </div>
-
-            <div class="glass p-10 rounded-[3rem] bouncy-hover">
-                <div class="h-14 w-14 bg-gradient-to-br from-rose-500 to-rose-600 rounded-2xl mb-8 flex items-center justify-center shadow-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                    </svg>
-                </div>
-                <h4 class="text-2xl font-bold mb-4">Petal Media</h4>
-                <p class="text-gray-500 leading-relaxed mb-6">
-                    Bespoke web legacies for couples. Transforming memories into handcrafted, animated digital experiences delivered with speed.
-                </p>
-                <div class="flex gap-3">
-                    <span class="text-xs font-bold text-rose-600 bg-rose-50 px-4 py-1.5 rounded-full">Web Design</span>
-                    <span class="text-xs font-bold text-rose-600 bg-rose-50 px-4 py-1.5 rounded-full">Animation</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="max-w-4xl mx-auto px-6 py-20 text-center">
-        <div class="glass p-16 rounded-[4rem] border border-gray-200 shadow-sm relative overflow-hidden">
-            <div class="absolute -top-10 -right-10 w-40 h-40 bg-blue-200/20 blur-3xl rounded-full"></div>
+        <div class="max-w-3xl">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight">Cool guy..</h1>
+            <p class="text-blue-600 font-bold uppercase tracking-widest text-xs mb-6">Class 12 Student • Vibe Coder • Editor</p>
             
-            <h3 class="text-5xl font-extrabold mb-6 tracking-tight">मेरी L ज़िंदगी</h3>
-            <p class="text-blue-600 font-bold uppercase tracking-widest text-sm mb-6">Blogs Coming Soon</p>
-            <p class="text-gray-400 italic max-w-sm mx-auto leading-relaxed">
-                Capturing the life of a 12th-grade student navigating code, creativity, and the digital void.
-            </p>
+            <div class="flex gap-4 justify-center">
+                <a href="#projects" class="px-8 py-3 bg-[#0071e3] text-white rounded-full font-semibold hover:bg-[#0077ed] transition-all">View Work</a>
+                <a href="mailto:anrdh86@gmail.com" class="px-8 py-3 glass rounded-full font-semibold hover:bg-white transition-all border border-gray-200">Email</a>
+            </div>
         </div>
     </section>
 
-    <footer class="py-16 text-center">
-        <div class="h-[1px] w-20 bg-gray-200 mx-auto mb-8"></div>
-        <p class="text-gray-400 font-medium text-sm tracking-wide">
-            &copy; 2026 Anirudh R. • Built with <span class="text-blue-500">Vibe Coding</span>
-        </p>
+    <section id="projects" class="max-w-5xl mx-auto px-6 py-24">
+        <h2 class="text-3xl font-bold mb-12">Projects</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="glass p-8 rounded-[2.5rem] bouncy">
+                <div class="text-4xl mb-4">⚙️</div>
+                <h3 class="text-2xl font-bold mb-2">config.engine</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Platform for devs to upload games, run tests, and get complete AI analysis & suggestions.</p>
+            </div>
+            
+            <div class="glass p-8 rounded-[2.5rem] bouncy">
+                <div class="text-4xl mb-4">🌸</div>
+                <h3 class="text-2xl font-bold mb-2">Petal Media</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Handcrafted bespoke web pages for couples. Elegant digital legacies delivered in 24 hours.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-5xl mx-auto px-6 py-24">
+        <div class="glass p-12 rounded-[3rem] text-center border-dashed border-gray-300">
+            <h3 class="text-3xl font-bold mb-2 text-gray-800">मेरी L ज़िंदगी</h3>
+            <p class="text-gray-400">Upcoming blogs for the comments. (Coming Soon)</p>
+            <button class="mt-6 px-6 py-2 bg-blue-100 text-blue-600 rounded-full font-bold text-sm">Notify Me</button>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center text-gray-400 text-xs">
+        <p>@ 2026 Anirudh R. | Vibe Coding</p>
     </footer>
 
 </body>
