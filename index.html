@@ -3,112 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anirudh | Portfolio</title>
+    <title>Anirudh R. | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background: radial-gradient(circle at top left, #1e3a8a, #000000);
+            background-color: #ffffff;
+            /* Subtle Apple-style mesh gradient */
+            background-image: 
+                radial-gradient(at 0% 0%, hsla(210,100%,95%,1) 0, transparent 50%), 
+                radial-gradient(at 50% 0%, hsla(220,100%,92%,1) 0, transparent 50%), 
+                radial-gradient(at 100% 0%, hsla(200,100%,96%,1) 0, transparent 50%);
             background-attachment: fixed;
-            color: white;
+            color: #1d1d1f;
             overflow-x: hidden;
         }
         .glass {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid rgba(209, 213, 219, 0.3);
         }
         .bouncy-hover:hover {
-            transform: scale(1.02) translateY(-5px);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform: scale(1.03) translateY(-8px);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+        }
+        .text-gradient {
+            background: linear-gradient(180deg, #1d1d1f 0%, #434343 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     </style>
 </head>
 <body class="min-h-screen">
 
-    <section class="flex flex-col items-center justify-center min-h-screen text-center px-4">
-        <div class="glass p-10 rounded-[3rem] shadow-2xl max-w-2xl bouncy-hover">
-            <h2 class="text-blue-400 font-semibold tracking-widest uppercase text-sm mb-4">Vibe Coder & Creator</h2>
-            <h1 class="text-6xl md:text-8xl font-extrabold mb-6 bg-gradient-to-b from-white to-gray-400 bg-clip-text text-transparent">
+    <nav class="fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center glass border-b border-gray-200/50">
+        <span class="font-bold text-xl tracking-tight">Anirudh R.</span>
+        <div class="flex gap-6 text-sm font-medium text-gray-600">
+            <a href="mailto:anrdh86@gmail.com" class="hover:text-blue-600 transition-colors">Contact</a>
+            <a href="https://instagram.com/anrdh86" target="_blank" class="hover:text-blue-600 transition-colors">Instagram</a>
+        </div>
+    </nav>
+
+    <section class="flex flex-col items-center justify-center min-h-screen text-center px-4 pt-20">
+        <div class="glass p-12 rounded-[3.5rem] shadow-xl max-w-3xl bouncy-hover">
+            <span class="px-4 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-bold uppercase tracking-widest mb-6 inline-block">
+                Class 12 Student • Vibe Coder
+            </span>
+            <h1 class="text-6xl md:text-8xl font-extrabold mb-6 text-gradient">
                 Cool guy..
             </h1>
-            <p class="text-gray-400 text-lg md:text-xl max-w-lg mx-auto leading-relaxed">
-                Designing interactions, motion graphics, and video editing through the lens of code.
+            <p class="text-gray-500 text-lg md:text-xl max-w-lg mx-auto leading-relaxed font-medium">
+                Merging the logic of code with the soul of motion graphics and video editing.
             </p>
-            <div class="mt-8 flex gap-4 justify-center">
-                <a href="mailto:anrdh86@gmail.com" class="px-8 py-3 bg-blue-600 hover:bg-blue-500 rounded-full font-semibold transition-all shadow-lg shadow-blue-500/20">Email Me</a>
-                <a href="https://instagram.com/anrdh86" target="_blank" class="px-8 py-3 glass rounded-full font-semibold hover:bg-white/10 transition-all">Instagram</a>
+            <div class="mt-10 flex flex-wrap gap-4 justify-center">
+                <a href="mailto:anrdh86@gmail.com" class="px-10 py-4 bg-blue-600 text-white rounded-full font-semibold transition-all hover:bg-blue-700 shadow-lg shadow-blue-500/20 active:scale-95">Get in Touch</a>
+                <a href="#projects" class="px-10 py-4 glass text-gray-800 rounded-full font-semibold hover:bg-white/50 transition-all active:scale-95">View Work</a>
             </div>
         </div>
     </section>
 
-    <section class="max-w-6xl mx-auto px-6 py-20">
-        <h3 class="text-3xl font-bold mb-12 text-center">Featured Projects</h3>
-        <div class="grid md:grid-cols-2 gap-8">
-            
-            <div class="glass p-8 rounded-[2.5rem] bouncy-hover">
-                <div class="h-12 w-12 bg-blue-500 rounded-2xl mb-6 flex items-center justify-center shadow-lg shadow-blue-500/40">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <section id="projects" class="max-w-6xl mx-auto px-6 py-32">
+        <div class="flex flex-col items-center mb-16">
+            <h3 class="text-4xl font-bold mb-4">Crafted Experiences</h3>
+            <div class="h-1 w-12 bg-blue-600 rounded-full"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-10">
+            <div class="glass p-10 rounded-[3rem] bouncy-hover">
+                <div class="h-14 w-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl mb-8 flex items-center justify-center shadow-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                 </div>
-                <h4 class="text-2xl font-bold mb-3">config.engine</h4>
-                <p class="text-gray-400 leading-relaxed">
-                    A platform for devs to upload games, choose configs, and get complete AI-driven analysis and suggestions.
+                <h4 class="text-2xl font-bold mb-4">config.engine</h4>
+                <p class="text-gray-500 leading-relaxed mb-6">
+                    A high-performance environment where game developers upload builds and let AI handle the heavy lifting of analysis and optimization suggestions.
                 </p>
-                <div class="mt-6 flex gap-2">
-                    <span class="text-xs font-mono bg-white/5 px-3 py-1 rounded-full">AI Analysis</span>
-                    <span class="text-xs font-mono bg-white/5 px-3 py-1 rounded-full">Game Dev</span>
+                <div class="flex gap-3">
+                    <span class="text-xs font-bold text-blue-600 bg-blue-50 px-4 py-1.5 rounded-full">AI Engine</span>
+                    <span class="text-xs font-bold text-blue-600 bg-blue-50 px-4 py-1.5 rounded-full">Game Dev</span>
                 </div>
             </div>
 
-            <div class="glass p-8 rounded-[2.5rem] bouncy-hover">
-                <div class="h-12 w-12 bg-pink-500 rounded-2xl mb-6 flex items-center justify-center shadow-lg shadow-pink-500/40">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div class="glass p-10 rounded-[3rem] bouncy-hover">
+                <div class="h-14 w-14 bg-gradient-to-br from-rose-500 to-rose-600 rounded-2xl mb-8 flex items-center justify-center shadow-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                     </svg>
                 </div>
-                <h4 class="text-2xl font-bold mb-3">Petal Media</h4>
-                <p class="text-gray-400 leading-relaxed">
-                    Custom handcrafted web pages for lovers. Delivering elegant, animated digital legacies in 24 hours.
+                <h4 class="text-2xl font-bold mb-4">Petal Media</h4>
+                <p class="text-gray-500 leading-relaxed mb-6">
+                    Bespoke web legacies for couples. Transforming memories into handcrafted, animated digital experiences delivered with speed.
                 </p>
-                <div class="mt-6 flex gap-2">
-                    <span class="text-xs font-mono bg-white/5 px-3 py-1 rounded-full">Design</span>
-                    <span class="text-xs font-mono bg-white/5 px-3 py-1 rounded-full">Motion</span>
+                <div class="flex gap-3">
+                    <span class="text-xs font-bold text-rose-600 bg-rose-50 px-4 py-1.5 rounded-full">Web Design</span>
+                    <span class="text-xs font-bold text-rose-600 bg-rose-50 px-4 py-1.5 rounded-full">Animation</span>
                 </div>
             </div>
-
         </div>
     </section>
 
     <section class="max-w-4xl mx-auto px-6 py-20 text-center">
-        <div class="glass p-12 rounded-[3rem] border-dashed border-white/20">
-            <h3 class="text-4xl font-bold mb-4">मेरी L ज़िंदगी</h3>
-            <p class="text-blue-400 font-medium mb-6">Coming Soon...</p>
-            <p class="text-gray-500 italic max-w-md mx-auto">
-                A blog capturing the chaos, the code, and the motion graphics journey.
+        <div class="glass p-16 rounded-[4rem] border border-gray-200 shadow-sm relative overflow-hidden">
+            <div class="absolute -top-10 -right-10 w-40 h-40 bg-blue-200/20 blur-3xl rounded-full"></div>
+            
+            <h3 class="text-5xl font-extrabold mb-6 tracking-tight">मेरी L ज़िंदगी</h3>
+            <p class="text-blue-600 font-bold uppercase tracking-widest text-sm mb-6">Blogs Coming Soon</p>
+            <p class="text-gray-400 italic max-w-sm mx-auto leading-relaxed">
+                Capturing the life of a 12th-grade student navigating code, creativity, and the digital void.
             </p>
         </div>
     </section>
 
-    <footer class="py-10 text-center text-gray-600 text-sm">
-        <p>&copy; 2026 anrdh86. Built with vibe coding.</p>
+    <footer class="py-16 text-center">
+        <div class="h-[1px] w-20 bg-gray-200 mx-auto mb-8"></div>
+        <p class="text-gray-400 font-medium text-sm tracking-wide">
+            &copy; 2026 Anirudh R. • Built with <span class="text-blue-500">Vibe Coding</span>
+        </p>
     </footer>
 
-    <script>
-        // Adding a simple mouse-glow effect
-        document.addEventListener('mousemove', (e) => {
-            const glow = document.createElement('div');
-            glow.className = 'fixed w-1 h-1 bg-blue-500 rounded-full pointer-events-none opacity-50 transition-opacity duration-1000';
-            glow.style.left = e.clientX + 'px';
-            glow.style.top = e.clientY + 'px';
-            glow.style.boxShadow = '0 0 40px 20px rgba(59, 130, 246, 0.1)';
-            document.body.appendChild(glow);
-            setTimeout(() => glow.remove(), 100);
-        });
-    </script>
 </body>
 </html>
